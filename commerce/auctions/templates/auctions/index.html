@@ -1,0 +1,41 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% if title %}
+        <h2 style="margin: auto;"><strong>{{category}}</strong>Active Listings:</h2>
+    {% else %}
+        <h2 style="margin: auto;">Active Listings</h2>
+    {% endif %}
+
+    {% if message %}
+        {% if color %}
+        <div style="color:{{color}};margin:30px;">
+            <strong>{{ message }}</strong>
+        </div>
+        {% endif %}
+    {% endif %}
+
+
+    <div class="container">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+    {% for listing in listings %}
+        <div class="col">
+            <a style="text-decoration: none; color: rgb(0,0,0);" href="{% url 'listing' listing.id%}">
+            <div class="card mt-3 shadow-sm" style="padding: 1px;">
+                <img src={{listing.img_url}} class="card-img-top"
+                style="width:100%; height:50vh; object-fit: cover;">
+                <div class="card-body">
+                        <h3 class="card-title"> {{listing.title }} </h3>
+                        <p class="desc-char-lim">{{ listing.description }} </p>
+                        <a href="{% url 'listing' listing.id %}" class="btn btn-primary">
+                            Current bid: £{{listing.current_bid}}
+                        </a>
+                </div>
+            </div>
+            </a>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+    
+{% endblock %}

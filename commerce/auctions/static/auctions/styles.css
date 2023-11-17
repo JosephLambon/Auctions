@@ -1,0 +1,40 @@
+.rounded-image {
+    border-radius: 15px;
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+    display: inline-block;
+    word-wrap: break-word;
+}
+
+.outer-padding{
+    margin-top:2.5%;
+    margin-bottom:2.5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.desc-char-lim {
+    width: 41ch;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.bid-text {
+    font-size: 22px;
+}
+
+.comments {
+    border: lightgray;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 15px;
+    margin: 1%;
+    padding: 20px;
+}
+
+.comments_header {
+    background-color: rgb(246, 246, 246);
+    border-radius: 15px;
+}

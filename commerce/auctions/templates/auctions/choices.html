@@ -1,0 +1,11 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    {% for choice in choices %}
+        <div class="d-grid gap-4">
+            <a href="{% url 'category' choice %}">
+                <button class="btn btn-primary" style="margin:10px;" type="button">{{choice}}</button>
+            </a>
+        </div>
+    {% endfor %}
+{% endblock %}

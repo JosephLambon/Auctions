@@ -1,0 +1,21 @@
+{% extends "auctions/layout.html" %}
+
+{% block body %}
+    <h1> Create new listing </h1>
+
+    <form action="{% url 'create' user.id %}" method="post"
+    style="margin-top:40px; margin-left:20px;">
+        {% csrf_token %}
+        <div class="row row-cols-2 gy-5">
+            {% for field in form %}
+                {% if field.name == "bidder" %}
+                {% else %}
+                    <div class="col-3 p-1"><strong>{{field.name|title}}:</strong></div>
+                    <div class="col-9 p-1">{{field}}</div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <input style="right:0; position:absolute; margin-right:50%; margin-top:10px;"type="submit" value="Create new listing">
+    </form>
+
+{% endblock %}
