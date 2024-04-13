@@ -77,7 +77,7 @@ python manage.py runserver
 
 ## <a id='video'> Video Demo </a>
 
-For this project, we were required to make a video displaying our web application's functionality. Feel free to watch this short exmaple of the final product. There are timestamps in the bio showing each of the implemented features.
+For this project, we were required to make a video displaying our web application's functionality. Feel free to watch this short example of the final product. There are timestamps in the bio showing each of the implemented features.
 
 <a href= 'https://youtu.be/dPfLyy0nitk'>
 <img width="1494" alt="Thumbnail" 
