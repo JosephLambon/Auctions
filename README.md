@@ -1,5 +1,5 @@
 # Auction - Commerce Site
->### A CS50W project
+>### (CS50W) Project 2: An Ebay-like commerce site.
 
 ## Contents
 1. [Project Synopsis](#project_synopsis)
